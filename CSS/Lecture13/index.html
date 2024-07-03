@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS = Cascading Style Sheet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        p{
+            background-color: blueviolet ;
+            /* To give priority to internal CSS in case of clash we use !important */
+        }
+
+        /* element */
+        h1{         /* value */
+            color: green;
+        /* property */
+        }
+    </style>
+    <!-- Internal CSS -->
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- External CSS -->
+
+</head>
+<body>
+    <h1>Welcome to SmartTech</h1>
+
+    <!-- Inline CSS -->
+    <p style="background-color: yellow;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, est!</p>
+            <!-- Property -->  <!-- Value-->
+    <p style="color : aqua;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis aliquam dignissimos doloribus corrupti quisquam perspiciatis explicabo, minima praesentium temporibus quo.
+        Numquam illo, est repellendus eligendi pariatur quisquam laboriosam commodi dolore.</p>
+    <!-- Inline CSS -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quos vero nostrum debitis inventore sunt consequatur tempore quibusdam quae. Dolorem, atque.</p>
+
+    <footer>I am Footer</footer>
+
+    <!-- Inline CSS has higher priority than internal CSS -->
+</body>
+</html>

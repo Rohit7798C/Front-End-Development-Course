@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* here 'p' is called as 'element' selector  */
+        p{
+            color:brown;
+            /* property: value */
+        }
+
+        /* if we use 'id' we have to put a '#' hashtag before the id */
+        #article1{
+            background-color: chartreuse;
+            color: crimson;
+        }
+
+        /* we have to use '.' for 'class' selector */
+        .paraClass{
+            background-color: yellow;
+        }
+
+        /* This is called Group Selector */
+        /* We can separate the elements by using ',' */
+        p,article{
+            width: 500px;
+        }
+        /* This is the way to style class of a particular paragraph using '.' */
+        p.paraClass{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Selectors are used to apply CSS or Style to a selected element -->
+    <h1>Welcome to SmartTech 2.0</h1>
+
+    <p class="paraClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam! Recusandae incidunt quidem, deleniti iure dolores iste cupiditate quos ipsam?</p>
+
+    <p class="paraClass">My Channel name is SmartTech</p>
+
+    <p class="paraClass">My Name is Rohit Chauhan</p>
+
+    <!-- we can use id also for css/style , it is called as id selector -->
+    <!-- Every element should have a unique id -->
+    <article id="article1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, aliquid dicta ullam quae, rem corrupti at magni expedita in minima sed deleniti, animi possimus facilis ratione iure fuga maiores. Omnis ducimus velit magni iusto quibusdam error laboriosam illum impedit esse, minima ex. Voluptatibus qui voluptas illum deserunt libero, suscipit vero.
+    </article>
+
+    <p>My name is babbar</p>
+</body>
+</html>
