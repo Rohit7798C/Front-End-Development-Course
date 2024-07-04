@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Importing the external tags using these below three links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        p{
+            font-style:italic; /* use to give a style to the font like italic */
+
+            font-size: 20px;/* use to set the size of font */
+            /* 1 physical pixel is equal to 1/96th of a physical inch i.e. 0.26mm*/
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* There are number of font-families bacause , if one is not avalaible you can use other */
+            /* This is called as 'FALL BACK' */
+            /* The fonts which are already available in our 'Browsers' are called 'Web Safe Fonts' */
+
+            font-family: 'Cedarville Cursive', cursive;
+            /* This is an external font-family I have used from Google */
+            /* use to set the handwriting of font  */
+
+            font-weight: 100; 
+            /* used to decide the thickness or darkness or blackness of font */
+
+            line-height: 40px; 
+            /* used to decide the gap between two lines */
+        }
+
+        #firstpara{
+            /* using direct color name */
+            background-color: yellow;
+            color: brown;
+        }
+
+        #secondpara{
+            /* using rgb colors */
+            background-color: rgb(109, 111, 250) ;
+        }
+
+        #thirdpara{
+            /* using rgba colors */
+            background-color: rgba(18, 126, 34, 0.8);
+            /* a stands for alpha which for transparancy level of color */
+        }
+
+        .firstclass{
+            background-color: #ff233d59;
+            /* first two components(ff) represent 'r' component, second two component(23) represent 'g' component, second-last two for 'b' component*/
+            /* last two denotes the transparancy/ opacity of the color */
+        }
+
+        #fourthpara{
+            /* Using HSL colors */
+
+            /* H(Hue) - Degree on the color wheel from 0 to 360. (0 or 360) is Red , 
+            120 is Green , 240 is Blue */
+
+            background-color: hsl(69, 50%, 50%);
+            /* S(Saturation)- Saturation can be described as the intensity of a color. It is a percentage value from 0% to 100%.
+               100% is full color, no shades of gray.
+               50% is 50% gray, but you can still see the color.
+               0% is completely gray; you can no longer see the color. */
+
+            /* L(Lightness) - The lightness of a color can be described as
+               how much light you want to give the color, where 0% means no light (dark),
+               50% means 50% light (neither dark nor light), and 100% means full light. */
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to SmartTech</h2>
+
+    <p id="firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur iusto unde aut nam rem esse totam voluptatibus neque excepturi.</p>
+
+    <p id="secondpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum veritatis aspernatur sunt molestias nihil laborum iure mollitia nostrum, deleniti voluptatibus perspiciatis hic tenetur qui odit, dignissimos quibusdam, nobis dolores quidem!</p>
+
+    <p id="thirdpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil recusandae, earum laborum sit autem cumque sapiente vitae incidunt repellat. Alias quibusdam temporibus, ex nobis quaerat tempora. Commodi, error! Impedit reiciendis officiis assumenda libero? Minima minus autem explicabo pariatur reprehenderit?</p>
+
+    <p class="firstclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nisi?</p>
+
+    <p id="fourthpara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit sunt quasi, quae ut tempora, optio eius suscipit eveniet repellendus distinctio dolorem neque debitis nulla esse ad reprehenderit repellat perferendis beatae.</p>
+</body>
+</html>
