@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS display property means how an element renders on a screen -->
+    <!-- There are two display properties 
+         1) Block elements (<div> , <p> , <h1>, etc)
+         2) Inline elements (<a> , <span> , etc)-->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* When we apply 'box-sizing: border-box' the box retains its size
+               but If we don't apply it then then the box expands itself
+               after applying margin and padding
+            */
+        }
+
+        .box{
+            /* 'display: inline;' can convert block element to inline element.*/
+            display: inline;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 20px; 
+        }
+
+        span{
+            border: solid 3px green;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            /* display: block; */
+            display: inline-block;
+            /* we can use inline-block for the properties of both */
+            
+            /* 'display: block' can convert span(inline element) to block element */
+        }
+
+        /* 4 properties of Block Elements (<div> , <p> , <h1>, etc)
+           1) Always come on new line.
+           2) They take the total width from extreme-left to extreme-right.
+           3) They respect the custom height and width.
+           4) They respect the custom margin and padding.
+        */
+
+        /* div{
+            border: solid 1px red;
+            width: 300px;
+            height: 300px;
+            margin: 25px;
+            padding: 25px;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- <div>
+        Welcome To SmartTech
+    </div>
+    <div>
+        Welcome to Codehelp
+    </div> -->
+
+    <!-- <div class="box">
+         Welcome To SmartTech
+    </div> -->
+
+    <span>
+        This is Rohit Chauhan
+    </span>
+    <span>
+        This is an Intelligent guy
+    </span>
+
+    <!-- 4 properties of Inline Elements (<a> , <span> , , etc) 
+        1) Always try to come on same line.
+        2) It by default takes the width as required by the content (content-width).
+        3) We can't apply the custom height and width.
+        4) We can't apply the custom margin. (Margin only Horizontal direction).
+        5) We can apply padding. 
+    -->
+    
+    <!-- We can convert <span> to block element using 'display: block;'-->
+</body>
+</html>
