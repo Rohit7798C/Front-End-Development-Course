@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        img{
+            margin: 10px;
+        }
+        .image2{
+            /* When we use relative property we position the object w.r.t. current Window */
+            /* We have 4 properties 
+               1) top
+               2) left
+               3) right
+               4) bottom 
+            */
+
+            /* Gap after positioning is maintained in relative */
+            position: relative;
+            top: 100px;
+            left: 200px; 
+
+            /* position: absolute; */
+            /* It works relative to its closest ancester/parent */
+            /* Gap is not maintained in Absolute positioning */
+            /* Absolute property is used for Overlapping */
+            /* top: 100px; */
+        }
+
+        .container{
+            position: relative;
+            height: 8000px;
+            /* background-color: brown; */
+        }
+
+        .image4{
+            /* The object gets fixed at one position */
+            /* The image is fixed w.r.t. the whole window */
+            position: fixed;
+        }
+
+        .image3{
+            /* The object remains sticky only inside its container */
+            position: sticky;
+            top: 100px;
+            /* It depends on the values of top,right, bottom, left */
+            /* It does not work without it */
+        }
+
+        .box{
+            background-color: yellow;
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Position Property -->
+    <!-- Positioning of elements -->
+    <h2>SmartTech</h2>
+
+    <div class="container">
+        <img src="IMG_20201217_195459.jpg" alt="PHOTO1" height="300px" width="300px" class="image1">
+        <img src="IMG_20210214_165303.jpg" alt="PHOTO2" height="300px" width="300px" class="image2">
+        <img src="IMG_20210526_094556.jpg" alt="PHOTO3" height="300px" width="300px" class="image3">
+        <img src="My Photo.jpg" alt="PHOTO4" height="300px" width="300px" class="image4">
+    </div>
+
+    <div class="box">
+
+    </div>
+</body>
+</html>
