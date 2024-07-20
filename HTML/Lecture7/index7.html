@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form is used to create form -->
+    <form>
+
+        <!-- value of 'for' attribute in label should be as same as 'id' in input tag -->
+
+        <label for="Email">Enter Email-ID</label>
+        <input type="text" id="Email" placeholder="enter your email here">
+
+        <!-- placeholder id used for giving faded text -->
+
+        <br/>
+        <br/>
+
+        <!-- 'type' defines types of input -->
+        <!-- 'type' can be text , submit , checkbox ,radio ,image ,date-->
+
+        <label for="PassWord">Enter Password</label>
+        <input type="text" id="PassWord">
+        <br/>
+        <br/>
+        <input type="Submit" value="Click Here">
+        <button>Click Submit</button>
+    </form> 
+
+    <!-- fieldset is used to group multiple elements -->
+
+    <fieldset>
+            <legend>HTML Dummy Form</legend>
+            <label for="DatePicker">Choose Date:</label>
+            <input type="date" id="DatePicker">
+            <br/>
+            <br/>
+            <label for="selector1">Choose Your Dish</label>
+            <select name="dishes" id="selector1">
+                <option value="Maggi">Maggi</option>
+                <option value="Kurkure">Kurkure</option>
+                <option value="Chips">Chips</option>
+            </select>
+            <!-- Select with multiple options create a Drop-down menu -->
+            
+            <br/><br/>
+            <button>Main Hoon Button</button>
+            <br/>
+            <br/>
+            <textarea name="textarea1" id="textarea1" cols="15" rows="2" placeholder="enter text here..."></textarea>
+    </fieldset>
+    </form>
+
+    <form>
+        <label for="textfield1"> Text Field:</label>
+        <input type="text" name="textfield1" id="textfield1">
+        <br/>
+        <br/>
+        <label for="button"> Button : </label>
+        <input type="submit" name="button" id="button" value="Subscribe">
+        <br/>
+        <br/>
+        <label for="radio1"> Male: </label>
+        <input type="radio" name="radio1" id="radio1">
+        <br/>
+        <br/>
+        <label for="radio2"> Female: </label>
+        <input type="radio" name="radio1" id="radio2">
+        <br/>
+        <br/>
+        <label for="radio3"> Prefer Not To Say: </label>
+        <input type="radio" name="radio1" id="radio3">
+    </form>
+</body>
+</html>
