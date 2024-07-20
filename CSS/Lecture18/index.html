@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        */
+
+        /*     Use of '%' element     */
+        /* .box{ */
+            /* border: 2px solid red; */
+            /* width: 25%; */
+            /* Width takes the 25% of body (parent) */
+        /* } */
+
+        .parent{
+            border: 1px solid black;
+            background-color: beige;
+            width: 50%;
+        }
+
+        .child{
+            border: 1px solid green;
+            background-color: aqua;
+            width: 20%;
+            /* width of child depends on parent */
+        }
+
+        /* .container{ */
+            /* background-color: beige; */
+            /* border: 1px solid green; */
+            /* height: 100vh; */
+            /* vh means (height of viewport i.e. our screen) , it takes 100% of our screen */
+            /* We can add vh on the scale of 1 to 100% */
+        /* }  */
+       
+
+        .box1{
+            border: 1px solid black;
+            font-size: 50px;
+        }
+
+        .wrapper {
+            font-size: 1em;
+            /* Default font size is always 1em = 16px */
+        }
+
+        .px {
+            width: 200px;
+        }
+
+        .vw {
+            width: 10vw;
+        }
+
+        .em {
+            width: 10em;
+            /* default 1em =16px , so for above 10em = 160px */
+        }
+
+        .container{
+            font-size: 10px;
+        }
+
+        .box{
+            font-size: 10em;
+            /* em takes the value of parent class='container' i.e 1em = 10px */
+        }
+
+        .firstPara{
+            border: solid 1px black;
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Size Units -->
+    <h2>SmartTech</h2>
+    <!-- <div class="box">
+        Welcome to SmartTech
+    </div> -->
+
+    <!-- <div class="parent">
+        <div class="child">
+                CHILD
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        Welcome To SmartTech
+    </div> -->
+
+    <!-- <div class="box1">
+        Rohit Chauhan
+    </div> -->
+
+    <!-- 
+        <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="box em">I am 10em wide</div>
+    </div> -->
+
+    <p>Hello ji</p>
+
+    <div class="container">
+        <div class="box">
+            Welcome to SmartTech
+        </div>
+    </div>
+    <!-- Since 'container' class is the parent and 'box' is the child class 
+         if we give font-size for parent as 10px and child be 10em 
+          then for child it will take value of em as value of parent class 
+          i.e. 1 em = 10px and not the default value of 16px -->
+
+     
+    <p class="firstPara">
+        Hello Ji!!!
+    </p>
+
+</body>
+</html>
+
+<!-- Logical pixels are mathematical points that occupy no area 
+     Physical pixels are actual pixels on the screen -->
+
+<!-- ppi - pixels per inch 
+     dpi - dots per inch -->
