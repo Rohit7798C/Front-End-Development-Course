@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            overflow: auto;
+            /* 'overflow: auto' , it is used to handle the overflow caused by float */
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            margin: 2px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            float: left;
+            /* When we apply 'float:left' the boxes A,B,C out of the container 
+               , this causes the overflow , this can be handeled using the 
+                'overflow: auto' keyword as above */
+        }
+        #item1{
+            float: right;
+        }
+        #item2{
+            float : right;
+        }
+        #item3{
+            float : right;
+        }
+    </style>
+</head>
+<body>
+    <!-- The great Collapse -->
+    <div class="box">
+        <div class="item" id="item3">A</div>
+        <div class="item" id="item3">B</div>
+        <div class="item" id="item3">C</div>
+    </div>
+</body>
+</html>
