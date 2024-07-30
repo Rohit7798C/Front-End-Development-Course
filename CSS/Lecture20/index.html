@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox (Flexible Box) -> 1-D Layout Method</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: solid 5px black;
+            margin: 2px;
+            padding: 2px;
+            display : flex;
+            height: 800px;
+
+            justify-content: start;
+            
+            /* justify-content: start; */
+            /* justify-content aligns the objects along the main axis */
+            /* justify-content: space-between; */
+            /* there is a space between the boxes and extreme boxes are touch to the boundaries */
+
+            /* justify-content: space-around; */
+            /* there is a space between the boxes and last two boxes also have a space between them and boundaries */
+
+            /* justify-content: space-evenly; */
+            /* Equally spaced everywhere */
+
+            /* flex property sets the flexible length on flexible items */
+            /* By default Flex-direction is row */
+            /* So it changes the column to row */
+
+            /* flex-direction: column; */
+            /* We again change the row to column using 'flex-direction: column' */
+
+            /* flex-direction: row-reverse; */
+            /* We change the order of colours using 'row-reverse' */
+            /* flex-direction: column-reverse; */
+            /* Also for column-reverse */
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* This fixes the width of box */
+            /* i.e. When we squeeze the page the width will not change
+               until space is available after that it will squeeze */
+
+            /* flex-direction: nowrap; */
+            /* No wrapping will be there and boxes will go on the next line */
+            /* flex-wrap: wrap-reverse; */
+
+            /* Short-hand Notation */
+            /* flex-flow: row wrap-reverse; */
+            /* flex-flow is used for combining 'flex-direction & flex-wrap' */
+
+            /* align-items: stretch; */
+            /* align-items property works corresponding to cross axis (vertical) */
+            /* By default align-items is stretch */
+            align-items: start;
+            align-content: center;
+            /* shifts multiple lines of content at once to one side */
+        }
+        .box{
+            /* height: 200px;
+            width: 200px; */
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: aqua;
+            /* order: 5; */
+            /* flex-shrink: 4; */
+            /* It increases the shrinking speed */
+            /* flex-grow: 1; */
+            /* It takes the remaining space and increases the growing speed */
+            align-self: start;
+        }
+        #box2{
+            background-color: red;
+            /* flex-grow: 1; */
+            
+        }
+        #box3{
+            background-color: green;
+            /* order: -1; */
+            /* flex-grow: 1; */
+        }
+        #box4{
+            background-color: orange;
+            /* flex-grow: 1; */
+            /* flex-basis: 400px */
+            /* It sets the initial main size (dimension) flex item  */
+        }
+        /* Order property changes the sequence of the objects */
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+</body>
+</html>
+
+<!-- if Flex-direction is row then main axis will be horizontal -->
+<!-- if Flex-direction is column then main axis will be vertical -->
+<!-- align-self works on cross axis -->

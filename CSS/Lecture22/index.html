@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-shadow and Text-shadow</title>
+    <style>
+        :root{
+            --primary-color:brown;
+            --custom-width:330px;
+          /* from root these variables can be accessed from anywhere */
+          /* these are custom variables */
+        }
+        
+        
+        .container{
+            background-color: beige;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+
+            /* --primary-color:brown;
+            --custom-width:330px; */
+            /* The above two are custom variables */
+           /* these variables once defined inside the box can be used inside the box only  */
+
+            background-color: aquamarine;
+            /* width: 330px; */
+            width:var(--custom-width);
+            /* the custom variable can be used above syntax */
+
+            height: 330px;
+            /* border: 1px solid brown; */
+
+            border: 1px solid var(--primary-color);
+
+            margin: 5px;
+            padding: 5px;
+            box-shadow: -10px    -60px     var(--primary-color);
+                    /* x-offset  y-offset  color*/
+                   /*horizontal  vertical  color*/
+
+            /* box-shadow: 10px   20px     50px   brown; */
+                  /* x-offset  y-offset    blur  color*/
+                /* blur-radius makes the shadow blur and it takes only positive values*/
+
+            /* box-shadow: 10px    15px           5px        20px        brown; */
+                    /* x-offset  y-offset  blur-radius  spread-radius   color*/
+                /* spread-radius makes the shadow to spread more */
+
+            /* box-shadow: 10px 15px 5px 12px  rgba(60,10, 100, 60); */
+            /* we can use rgb , rgba or named colors */
+
+            /* box-shadow: inset  10px 15px yellow; */
+            /* 'inset' means shadow comes from inside */
+
+            /* box-shadow: 10px 15px red, 20px 25px green; */
+            /* two shadows using commas */
+        }
+
+
+        #head1{
+            /* text-shadow: 12px       5px        1px      rgb(197, 44, 44); */
+                       /* x-offset  y-offset blur-radius    color */
+            /* It gives shadow to the text */
+            /* It does not spread-radius */
+
+            /* text-shadow: yellow    11px      12px      2px; */
+                        /*  color  x-offset  y-offset blur-radius */
+
+            /* text-shadow: blue    1px       2px ; */
+                        /* color  x-offset  y-offset */
+
+            /* text-shadow: 12px 14px; */
+            /* It takes the shadow as it is if we don't add any color */
+            /* color: tomato; */
+
+            text-shadow: 1px 2px 2px red, 4px -4px green, -4px 3px yellow;
+            /* adding multiple text-shadows */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <img src="logoimg.jpg" alt="logo" height="120px">
+            <h2 id="head1">Welcome To SmartTech</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum voluptates ad odit ipsum architecto amet officiis praesentium molestias rem accusamus, neque quisquam.</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: beige;
+            border: 2px solid black;
+
+            /* transition-property: width; */
+            transition-property: all;
+            /* If we apply 'all' then transition applies on all properties given below in 'hover' */
+            transition-duration: 4s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+            /* transition-timing-function: ease; */
+            /* transition-timing-function: ease-in; */
+            /* transition-timing-function: ease-out; */
+            
+            /* Short-hand Notation */
+            /* transition: all      2s; */
+                    /* property duration */
+            
+            /* transition: all      2s      5s; */
+                    /* property duration  delay */
+
+            /* transition: all      2s        ease-in; */
+                     /* property  duration  easing-function*/
+
+            /* transition: all      2s         ease-in          5s; */
+                     /* property  duration  easing-function    delay*/
+
+            /* Apply to 2 properties using comma */
+            transition: width 2s, height 5s;
+        }
+
+        /* This is called Pseudo class */
+        .box:hover{
+            width: 1500px;
+            height:720px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Transitions :- one source to one destination -->
+    <!-- Animation:- Series of complex movements // we can also say as
+        it is a series of transitions-->
+
+        <div class="box">
+
+        </div>
+</body>
+</html>

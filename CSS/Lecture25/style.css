@@ -1,0 +1,44 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: auto; */
+    transition: all 2s linear;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    /* transform: rotate(360deg); */
+    /* rotation of object */
+
+    /* transform: scale(2); */
+    /* The object becomes 2 times bigger than actual size */
+
+    transform: scale(0.5);
+    /* The object becomes 0.5(becomes half of its size) times smaller than actual size */
+
+    transform: rotate(-45deg);
+    /* -ve means it rotates anticlockwise */
+
+    transform: skew(-45deg);
+    /* It tilts the object by 45deg */
+
+    transform: translate(500px, 500px);
+    /* It allows movement in x and y direction */
+}
+p{
+    font-size: 36px;
+}
