@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(100, 96, 96);
+            /* grid-template-columns: repeat(3,1fr); */
+            grid-template-columns: repeat(auto-fit ,minmax(200px,500px));
+            /* It automatically decides the column-width size between 200px to 500px 
+               and generates the no. of columns by 'auto-fit' */
+            /* 'Auto-fit' can be used instead of 'media query' */
+
+            text-align: center;
+        }
+        .item{
+            padding: 1rem;
+            border: 3px solid black;
+            background-color: rgb(48, 48, 199);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+    <!-- <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item">P</div> -->
+    </div>
+</body>
+</html>

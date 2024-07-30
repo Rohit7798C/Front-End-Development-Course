@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3-D Transforms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            background-color: antiquewhite;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            text-align: center;
+            
+        }
+        .item{
+            height: 150px;
+            width: 150px;
+            background-color: rgb(46, 222, 33);
+            border: 2px solid black;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #rotateX:hover{
+            transform: rotateX(45deg);
+            /* Rotates by 45deg around X-axis on hovering */
+        }
+        #rotateY:hover{
+            transform: rotateY(45deg);
+            /* Rotates by 45deg around Y-axis on hovering */
+        }
+        #rotateZ:hover{
+            transform: rotateZ(45deg);    
+            /* Rotates by 45deg around Z-axis on hovering */       
+        }
+        #translateX:hover{
+            transform: translateX(100px);
+            /* It moves the box along X-axis to the right for positive 
+               and to the left for negative */
+        }
+        #translateY:hover{
+            transform: translateY(-100px);
+            /* It moves the box along Y-axis downside for positive 
+               and Upside for negative */
+        }
+        #translateZ:hover{
+            transform: perspective(300px) translateZ(100px);
+            /* For Z-axis We specially set the perspective (i.e. how far from we are looking to the box) 
+               without which it does'nt work */
+            /* For positive translate it comes towards us and for negative translate 
+               it goes inside the screen */
+        }
+        #scaleX:hover{
+            transform: scaleX(1.5);
+            /* It makes the object 1.5 times of its size along X-direction */
+        }
+        #scaleY:hover{
+            transform: scaleY(1.5);
+            /* It makes the object 1.5 times of its size along Y-direction */
+        }
+        #scaleZ:hover{
+            transform: perspective(300px) scaleZ(4) rotateY(-30deg);
+            /* It looks like windows symbol when appyling both scaling and rotation */
+        }
+        #skewX:hover{
+            transform: skewX(30deg);
+            /* It tilts the box along one side (along X-axis)
+               Left side for positive and right side for negative 
+               By default 'skew' acts along X-axis if we only write skew*/
+        }
+        #skewY:hover{
+            transform: skewY(25deg);
+            /* It tilts the box along one side (along Y-axis) */
+        }
+        #skewZ:hover{
+            transform: skewZ(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="rotateX">RotateX</div>
+        <div class="item" id="rotateY">RotateY</div>
+        <div class="item" id="rotateZ">RotateZ</div>
+        <div class="item" id="translateX">TranslateX</div>
+        <div class="item" id="translateY">TranslateY</div>
+        <div class="item" id="translateZ">TranslateZ</div>
+        <div class="item" id="scaleX">ScaleX</div>
+        <div class="item" id="scaleY">ScaleY</div>
+        <div class="item" id="scaleZ">ScaleZ</div>
+        <div class="item" id="skewX">SkewX</div>
+        <div class="item" id="skewY">SkewY</div>
+        <div class="item" id="skewZ">SkewZ</div>
+    </div>
+</body>
+</html>
