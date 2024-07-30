@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <thead>
+            <h2>Job Application</h2>
+        </thead>
+
+        <tbody>
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name">
+            <br/>
+            <br/>
+            <label for="Email">Email:</label>
+            <input type="text" name="Email" id="Email">
+            <br/>
+            <br/>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone">
+            <br/>
+            <br/>
+            <label for="Resume">Resume:</label>
+            <input type="file" name="resume" id="Resume">
+            <br/> 
+            <br/>
+            <label for="Exp">Experience:</label>
+            <input type="number" name="experience" id="Exp" min="0" max="50">
+            <br/>
+            <br/>
+            <fieldset>
+                <legend>Skills</legend>
+
+                <label for="HTML">HTML</label>
+                <input type="checkbox" name="html" id="HTML">
+
+                <label for="CSS">CSS</label>
+                <input type="checkbox" name="css" id="CSS">
+
+                <label for="JavaScript">JavaScript</label>
+                <input type="checkbox" name="JavaScript" id="JavaScript">
+            </fieldset>
+            <br/>
+            <label for="Education">Highest Education:</label>
+            <select name="Education" id="Education">
+                <option value="High School">High School</option>
+                <option value="College">College</option>
+                <option value="School">School</option>
+                <option value="B.E/B.Tech">B.E./B.Tech</option>
+            </select>
+            <br/>
+            <br/>
+        <fieldset>
+            <legend>Availability:</legend>
+            <br/>
+            <label for="Full">Full-Time</label>
+            <input type="radio" name="Full" id="Full">
+            <br/>
+            <label for="Part">Part-Time</label>
+            <input type="radio" name="Full" id="Part">
+        </fieldset>
+            <br/>
+            <br/>
+            <label for="Comments">Additonal Comments:</label>
+            <br/><br/>
+            <textarea name="Comments" id="Comments" cols="30" rows="10" placeholder="Write Your Comments here"></textarea>
+            <br/>
+            <input type="submit" name="Register" id="Register" value="Submit Application">
+        </tbody>
+    </form>
+</body>
+</html>
