@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Manipulation</title>
+
+</head>
+<body>
+    <!-- Global object : Window object, under which all the global variables and global methods lie -->
+    <!-- Window Object contains everything DOM , BOM , JS Core-->
+    <!-- Window Object is created by Browser , browser can control window -->
+
+    <!-- A) DOM (Browser Object Model)=> All the interactions with HTML Code comes under DOM. -->
+    <!-- Document : When we convert an HTML code into Js Object then that object is called Document -->
+    <!-- [HTML Code => JS Object => Document] -->  
+    <!-- This overall process is called DOCUMENT OBJECT MODEL -->
+
+    <!-- We have 'characters' in angular brackets i.e. <html>, it is called 'tag',then we have 'tokenizer' which converts the 'tags' into 'tokens',
+         those 'tokens' are then converted into 'nodes' , and then multiple 'nodes' together form a 'DOM'.
+         
+        [characters -> tags -> tokens -> nodes -> multiple nodes -> DOM]
+    -->
+
+    <!-- B) BOM (Browser Object Model)=>All interations with the browser(except HTML interaction)comes under BOM -->
+
+    <!-- <div id="fdiv">
+        <p>
+            This is my First
+            <span>
+                Text
+            </span>
+        </p>
+        <p style = "display: none;">This is my Second Para</p>
+    </div> -->
+
+    <!-- <p id="fpara" class = "textMatter">First Paragraph</p>
+    <p id="spara" class = "textMatter">Second Paragraph</p>
+    <p id="tpara" class = "textMatter">Third Paragraph</p>
+    <p id="fopara" class = "textMatter">Fourth Paragraph</p>
+
+    <h1 id="fheading" class = "textMatter">First Heading</h1> -->
+    
+    <!-- command: -->
+    <!-- document.getElementById("fpara"); -->
+    <!-- Output: -->
+    <!-- <p id="fpara">First Paragraph</p> -->
+
+    <!-- command: -->
+    <!-- document.getElementById("fheading"); -->
+    <!-- Output: -->
+    <!-- <h1 id="fheading">First Heading</h1> -->
+
+    <!-- command: -->
+    <!-- document.getElementsByClassName("textMatter"); -->
+    <!-- Output: -->
+    <!-- HTMLCollection(2) [p#fpara.textMatter, h1#fheading.textMatter, fpara: p#fpara.textMatter, fheading: h1#fheading.textMatter] -->
+
+    <!-- We can access multiple 'objects' linked with each other through a class using 'document.getElementsByClassName()' -->
+
+    <!-- command -->
+    <!-- document.getElementsByTagName("p"); -->
+    <!-- Output -->
+    <!-- HTMLCollection [p#fpara.textMatter, fpara: p#fpara.textMatter] -->
+
+    <!-- In short -->
+    <!-- getElementById : gives a single output because Id is unique -->
+    <!-- getElementsByClassName : gives a array like collection of outputs , because a class can contain multiple elements at once -->
+    <!-- getElementsByTagName : gives a array like collection of outputs, because a document can contain multiple elements with same tag -->
+
+
+    <!-- We can also use 'querySelector' for above operations -->
+
+    <!-- For ID (We use '#' for ID)-->
+    <!-- command -->
+    <!-- document.querySelector("#fpara"); -->
+    <!-- output -->
+    <!-- <p id="fpara" class="textMatter">First Paragraph</p> -->
+
+    <!-- For Class (We use '.' for Class)-->
+    <!-- command -->
+    <!-- document.querySelector(".textMatter"); -->
+    <!-- output -->
+    <!-- <p id="fpara" class="textMatter">First Paragraph</p> -->
+    
+    <!-- A Catching point here : When we were using getElementsById("class_name"), we were getting all the objects of that class in form of an array,
+        but in case of querySelector we are only getting the first object -->
+
+    <!-- For Tags -->
+    <!-- command -->
+    <!-- document.querySelector("p");  -->
+    <!-- output -->
+    <!-- <p id="fpara" class="textMatter">First Paragraph</p> -->
+
+    <!-- Same Catching point as above -->
+
+    <!-- But if we want all the elements in case of both Tags and Classes we must use 'querySelectorAll()' -->
+
+    <!-- We can also access the elements using '$0' on the console, we just have to select the element using the arrow button 
+        so that element can be printed using '$0' on the console. We can also store the value of $0 into a variable and print it. -->
+
+    <!-- Update existing element -->  
+    <!-- We can do the following 
+        1)innerHTML :  
+
+        a) get using innerHTML (get means printing)
+        Suppose we are dealing with a button on web page using the pointer and printing it with $0.
+        After that we are using a variable let button = $0 and printing it. So, with button.innerHTML
+        we can print the inner HTML Code i.e. <p> paragraph tags etc. present inside it.
+        
+        getting : button.innerHTML;
+
+        b) set using innerHTML (set means updating)
+        button.innerHTML = '<p>HELLO JII</p>';
+        Setting the value of paragraph tag, and printing it.
+        button.innerHTML;
+
+        2)outerHTML : outerHTML is similar to innerHTML but only difference is that outerHTML is that it prints the outer tag also.
+        OuterHTML includes everything: It considers the element itself (the box) along with all its content (what's inside the box).
+
+        3)text-content : It prints the output as it is written in the code.
+        command : element.textContent
+        output : 
+        '\n        \n            This is my First\n            \n                Text\n            \n        \n        This is my Second Para\n    '
+
+        4)innerText : It prints the content same as how it is rendered on the Web Page.
+        command : element.innerText
+        output :  
+        'This is my First Text'
+    -->
+
+    <!-- Adding element -->
+    <!-- <div id="fdiv">
+        <p>
+            This is my First
+            <span>
+                Text
+            </span>
+        </p>
+        <p>This is my Second Para</p>
+    </div>  -->
+
+
+    <!-- command -->
+    <!-- let fHeading = document.createElement("h1"); -->
+    <!-- output -->
+    <!-- undefined -->
+
+    <!-- command -->
+    <!-- fHeading -->
+    <!-- output -->
+    <!-- <h1></h1> -->
+
+    <!-- command -->
+    <!-- let bodyTag = document.querySelector('body'); -->
+    <!-- output -->
+    <!-- undefined -->
+
+    <!-- command -->
+    <!-- bodyTag; -->
+    <!-- output -->
+    <!-- <body>​…​</body>​ -->
+
+    <!-- command -->
+    <!-- bodyTag.appendChild(fHeading); -->
+    <!-- Whenever we append a child it gets added at the end in the document/body -->
+
+    <div style="background-color: yellow; padding : 1rem ; margin : 1rem;">
+        Hello ji
+        <div id="mydiv" style="background-color: grey; padding : 3rem">
+            <p id="fpara">First</p>
+            <h1>Second</h1>
+            <p>Third</p>
+        </div>
+    </div>
+ 
+
+    <!-- But if we want to add the element at any position of our choice we use 'insertAdjacentElement()' -->
+    <!-- Here we provide two things 
+        1) At what position we want to insert. 
+            a) before begin
+            b) after begin
+            c) before end
+            d) after end
+        2) What HTMLcontent we want to insert.
+    -->
+
+
+    <!--   parent.insertAdjacentElement 
+    <div>
+
+    //beforebegin
+
+        <div>   -> If this a parent div
+
+        //afterbegin
+
+            <p>    </p>
+
+            <p>    </p>
+
+        //beforeend
+
+        </div>
+
+    //afterend
+
+    </div>        -->
+
+
+    <!-- Removal of an Element -->
+    <!-- We require two things parent and child -->
+    <!-- parent.removeChild(child) -->
+
+
+    <script src = "index.js"></script>
+</body>
+</html>
