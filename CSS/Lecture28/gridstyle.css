@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(85, 80, 80);
+    display: grid;
+    /* grid-template-columns: repeat(1,300px); */
+    grid-template-columns: repeat(3,1fr);
+    /* If we apply '1fr' , the column will get placed at the end */
+    grid-template-rows: repeat(4,200px);
+    border: 2px solid white ;
+    gap: 0.4rem;
+    padding: 4rem;
+
+    /* Justify-items is for object inside the cell along horizontal axis*/
+
+    /* justify-items: center; */
+    /* the objects gets placed at the center inside the cell */
+
+    /* justify-items: stretch; */
+    /* the objects gets stretch inside the cell,
+        when height and width is not applied */
+
+    /* justify-items: start; */
+    /* the objects gets placed at the start inside the cell */
+
+    /* justify-items: end; */
+    /* the objects gets placed at the end inside the cell */
+
+    /* align-items is for object inside the cell along vertical axis */
+    /* align-items: stretch; */
+
+    /* place-items: center; */
+    /* It combines both justify-self and align-self,
+       and finds the center of both combining */
+}
+
+.item{
+    /* height: 50px;
+    width: 100px; */
+    background-color: rgb(48, 234, 82);
+    border: 5px solid rgb(218, 203, 203);
+
+
+    /* Justify-self is for item, how it is placed inside it's cell */
+
+
+    /* justify-self: end; */
+    /* Since it is a single cell in size of 300px , it will get placed at 
+       a distance of 300px (i.e. end) */
+
+    /* justify-self: start; */
+    /* it will get placed at the start of the cell */
+
+    /* justify-self: center; */
+    /* it will get placed at the center of the cell */
+
+    /* justify-self: stretch; */
+    /* it will get stretched along the horizontal axis, if no height and no width is applied  */
+    /* Otherwise nothing will changed if height and width is applied */
+
+    /* align-self: end; */
+    /* It get placed to bottom most point of the cell along vertical direction */
+
+    /* align-self: center; */
+    /* It get placed at the center of the cell along vertical direction */
+
+    /* align-self: stretch; */
+    /* it will get stretched along the vertical axis,
+       when height and width are not applied */
+
+    /* place-self: center; */
+    /* It combines both justify-self and align-self, and finds the center of both combining */
+
+    /* place-self: stretch; */
+    /*It combines both justify-self and align-self, 
+      and stretches along both directions combining  */
+}

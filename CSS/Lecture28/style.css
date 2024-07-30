@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    background-color: rgb(51, 50, 50);
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    /* It makes the container look like grid */
+
+    padding: 4rem;
+    /* It gives a Padding around the container */
+ 
+    row-gap: 1rem;
+    column-gap: 1rem;  
+
+    gap: 1rem;
+    /* We can use short-hand property as 'gap' for both row and column */
+
+    /* grid-template-rows: 100px 100px; */
+    /* Each Row is of 100px, Since there are two rows so there will be two 100px */
+    
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* fr (Fractional Unit):-the rows are divided into 1:1:1 ratio of the whole grid */
+
+    /* grid-template-rows: repeat(4, 1fr); */
+    /* As we have to write 'fr' for each row , for which we use 
+       'repeat(no. of rows , 1fr)' */
+
+    /* grid-template-columns: 100px 100px 100px; */
+    /* Each column is of 100px, Since there are three columns 
+       so there will be three 100px for each column */
+
+    /* grid-template-columns: repeat(3,1fr); */
+    /* fr (Fractional Unit):-the columns are divided into 1:1:1 ratio of the whole grid */
+    
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+.item{
+    background-color: rgb(94, 94, 154);
+    border: 5px solid black;
+    font-size: 2rem; 
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .header, .footer{
+    grid-column-start: 1;
+    grid-column-end: 4; */
+    /* The header box gets extended from column no. 1 to column no. 4 */
+/* } */
+
+/* .footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+} */
+
+/* .sidebar{
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    /* The sidebar gets extended from row-2 to row-4 */
+    /* We have to increase the no. of rows as per extension otherwise
+       the remaining rows will get compressed */
+/* } */
+
+/* .content1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+} */
+
+
+@media (min-width:768px){
+    /* Below things (i.e. Normal) will happen if we go greater than 768px */
+    .container{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .header, .footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /* The column gets stretched from 1st column to 4th column */
+    }
+    .sidebar{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        /* The row gets stretched from 1st column to 4th row */
+    }
+    .content1{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
