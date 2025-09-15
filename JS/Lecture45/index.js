@@ -14,15 +14,15 @@
 // - Hoisting doesn't work for function Expression.
 // - Gives Reference Error.
 // sayHello();
-// let sayHello =function(){
+// let sayHello = function(){
 //     console.log("Hi , all of you!!");
 // }
 
 
-// C)Variable Hoisting (using 'var' keyword)
+// C) Variable Hoisting (using 'var' keyword)
 // var age;           //Only declaration moves to top
 // console.log(age);        //Calling the variable before its declaration and definition, gives undefined error
-// var age =25;
+// var age = 25;
 
 
 // D) Variable Hoisting (using 'let' and 'const' keyword)
@@ -38,10 +38,10 @@
 // 1)function Hoisting
 // - In case of function Hoisting, function definition also moves to top along with function declaration,that is why we get the output
 // 1)variable Hoisting
-// - In case of variable Hoisting,only variable declartion moves to top and not the definition, that is why we get the output as undefined.
+// - In case of variable Hoisting, only variable declaration moves to top and not the definition, that is why we get the output as undefined.
 
 
-// E) Hositing on class (Class level Hoisting is not possible)
+// E) Hoisting on class (Class level Hoisting is not possible)
 //    i) Class : It is a blue print, which tells that i have created a high level entity which contains a certain properties.
 //    ii) Object : The actual output(instance) that we will get after executing the blue print is called the object. It is also called as Instance of the class.
 //    e.g. 2D sketch of a house on paper is called class, while actual house constructed is called Object.
@@ -172,6 +172,7 @@
 // var greet = function(){
 //     console.log("Hello world!!");
 // }
+
 
 
 
