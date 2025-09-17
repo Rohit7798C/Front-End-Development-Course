@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Manipulation - Styling Elements</title>
+</head>
+<body>
+    <!-- 
+    <p>In previous lecture we studied how we can change HTML using Javascript</p>
+    <p>In this lecture we will study, how can we add CSS properties using JavaScript</p>
+     -->
+  
+    <div id="fdiv" style="background-color: aqua; padding: 2rem">
+        First Div
+        <p id="fpara" style="background-color: green; padding: 1rem" class="firstClass secondClass">First para</p>
+
+        <div id="sdiv" style="background-color: yellow; padding: 1.2rem">
+            Second div
+            <p id="spara" style="background-color: orange; padding: 0.8rem">Second para</p>
+        </div>
+
+    </div>
+
+<!-- ****** Using  ".style" ****** -->
+    <!-- On the CONSOLE -->
+<!-- let paraElement = document.getElementById('spara'); -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- paraElement; -->      
+<!-- <p id=​"spara" style=​"background-color:​ orange;​ padding:​ 0.8rem">​Second para​</p>​ -->
+
+
+<!-- Getting the CSS properties applied in the element -->
+
+<!-- console.log(paraElement.style); -->
+<!-- VM1268:1 CSSStyleDeclaration {0: 'background-color', 1: 'padding-top', 2: 'padding-right', 3: 'padding-bottom', 4: 'padding-left', accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …} -->
+
+
+<!-- ***WE CAN SET ONLY ONE CSS PROPERTY(inline style) AT A TIME USING '.style' 
+    i.e. We can 'get' or 'set' only one inline style using '.style' at a time *** -->
+
+<!-- paraElement.style.backgroundColor = 'blue'; -->
+<!-- 'blue' -->
+
+<!-- paraElement.style.color = 'white'; -->
+<!-- 'white' -->
+
+
+<!-- ****** Using  ".style.cssText" ****** -->
+<!-- For 'getting' or 'setting' multiple inline styles at once we use '.cssText' --> 
+<!-- We can access multiple 'inline styles' using '.cssText' at once -->
+
+<!-- On the CONSOLE -->
+<!-- let secondElement = document.getElementById('sdiv'); -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- secondElement; -->
+<!-- <div id=​"sdiv" style=​"background-color:​ yellow;​ padding:​ 1.2rem">​…​</div>​ -->
+
+
+<!-- Getting the CSS properties applied on the element -->
+<!-- secondElement.style.cssText; -->
+<!-- 'background-color: yellow; padding: 1.2rem;' -->
+
+
+<!-- Setting multiple CSS properties applied on the element using '.style.cssText' -->
+<!-- secondElement.style.cssText = "background-color : black; color: white; padding: 0.5rem"; -->
+<!-- 'background-color : black; color: white; padding: 0.5rem' -->
+
+
+
+<!-- ****** Using  ".setAttribute" ****** -->
+<!-- setAttribute : It is used 'set' the value of attributes explicitly, for example we can 'set' the value of 'style' for an element -->
+<!-- **** setAttribute replaces the value of attribute if already exists **** -->
+
+<!-- On the CONSOLE -->
+<!-- let firstElement = document.querySelector('#fdiv'); -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- firstElement; -->
+<!-- <div id=​"fdiv" style=​"background-color:​ aqua;​ padding:​ 2rem">​…​</div>​ -->
+
+
+<!-- 'Setting' a new 'class' in the 'first div' -->
+<!-- firstElement.setAttribute('class','divClass'); -->
+<!-- undefined -->
+
+<!-- Printing the element -->
+<!-- firstElement; -->
+<!-- <div id=​"fdiv" style=​"background-color:​ aqua;​ padding:​ 2rem" class=​"divClass">​" First Div "<p id=​"fpara" style=​"background-color:​ green;​ padding:​ 1rem">​First para​</p>​<div id=​"sdiv" style=​"background-color:​ yellow;​ padding:​ 1.2rem">​…​</div>​</div>​ -->
+
+
+<!-- 'Setting' a second new 'secondDivClass' in the 'first div' -->
+<!-- firstElement.setAttribute('class','secondDivClass'); -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- firstElement; -->
+<!-- <div id=​"fdiv" style=​"background-color:​ aqua;​ padding:​ 2rem" class=​"secondDivClass">​…​</div>​ -->
+
+
+<!-- Setting the 'style' of the element -->
+<!-- firstElement.setAttribute('style','padding: 0.1rem'); -->
+<!-- undefined -->
+
+
+
+
+<!-- ****** Using  ".className" ****** -->
+<!-- We can 'get' or 'set' multiple classes in an element -->
+
+<!-- On the CONSOLE -->
+<!-- let fpara = $0; -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- fpara; -->
+<!-- <p id=​"fpara" style=​"background-color:​ green;​ padding:​ 1rem" class=​"goku vegeta">​First para​</p>​ -->
+
+
+<!-- Printing the classes in the element -->
+<!-- fpara.className; -->
+<!-- 'goku vegeta' -->
+
+
+<!-- Creating a new class in the element -->
+<!-- fpara.className = ('Gohan Bulbul'); -->
+<!-- 'Gohan Bulbul' -->
+
+
+<!-- Again printing the element with new class in the element -->
+<!-- fpara; -->
+<!-- <p id=​"fpara" style=​"background-color:​ green;​ padding:​ 1rem" class=​"Gohan Bulbul">​First para​</p>​ -->
+
+
+
+<!-- ****** Using  ".classList" ****** -->
+<!-- We can 'get' class from 'array' or 'list' format -->
+<!-- We can 'add','remove','toggle(added hai toh remove kardo and vice-versa)','contains (to check whether a particular element contains 'class')' -->
+
+
+<!-- On the CONSOLE -->
+<!-- let fpara = document.querySelector('#fpara'); -->
+<!-- undefined -->
+
+
+<!-- Printing the element -->
+<!-- fpara; -->
+<!-- <p id=​"fpara" style=​"background-color:​ green;​ padding:​ 1rem" class=​"firstClass secondClass">​First para​</p>​ -->
+
+
+<!-- Printing the classes in the element -->
+<!-- fpara.classList; -->
+<!-- DOMTokenList(2) ['firstClass', 'secondClass', value: 'firstClass secondClass'] -->
+
+
+<!-- Adding a new class -->
+<!-- fpara.classList.add('thirdClass'); -->
+<!-- undefined -->
+
+
+<!-- Printing the classes in the element -->
+<!-- fpara.classList; -->
+<!-- DOMTokenList(3) ['firstClass', 'secondClass', 'thirdClass', value: 'firstClass secondClass thirdClass'] -->
+
+
+<!-- Removing a class -->
+<!-- fpara.classList.remove('firstClass'); -->
+<!-- undefined -->
+
+
+<!-- Printing the classes in the element -->
+<!-- fpara.classList; -->
+<!-- DOMTokenList(2) ['secondClass', 'thirdClass', value: 'secondClass thirdClass'] -->
+
+
+<!-- Toggling a class (class gets deleted) -->
+<!-- fpara.classList.toggle('secondClass'); -->
+<!-- false -->
+
+
+<!-- class absent(deleted due to toggle) -->
+<!-- fpara.classList; -->
+<!-- DOMTokenList ['thirdClass', value: 'thirdClass'] -->
+
+
+<!-- class is present(again added) -->
+<!-- fpara.classList.toggle('secondClass'); -->
+<!-- true -->
+
+
+<!-- Printing the classes in the element -->
+<!-- fpara.classList; -->
+<!-- DOMTokenList(2) ['thirdClass', 'secondClass', value: 'thirdClass secondClass'] -->
+
+
+<!-- Checking whether a class is present or not using 'contains' -->
+<!-- fpara.classList.contains('firstClass'); -->
+<!-- false -->
+
+
+<!-- Checking whether a class is present or not using 'contains' -->
+<!-- fpara.classList.contains('secondClass'); -->
+<!-- false -->
+
+</body>
+</html>
