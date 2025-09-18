@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events and Listeners</title>
+</head>
+<body>
+    <!-- Events : Events are nothing but announcements
+        e.g : Scrolling, clicking, double clicking, Key pressing
+        - We are calling it announcement because some kind of action is attached with it that gets executed.
+        - E.g: We can go to a certain website and go to console, and check for the events by using monitorEvents(document);
+        - Using this, when we click or scroll on the page, the event like touchmove, mouseover, scroll, etc are visible.
+        - We can stop seeing the events by using unmonitorEvents(document);
+
+
+        Event-Target : It is a Type of Entity, where our event is received. It is a possibility that we may have applied an eventListener or eventHandler for this event.
+        - E.g: Suppose we have a button on HTML web page, and someone clicks on that button, then that 'button is called as Event-target' and 'clicking the     button is called an Event.'
+        - Action performed on clicking the button is stored at a location called eventListener.
+        - E.g: Suppose we have a Video Player and it consists of play/pause button, clicking on which plays or pauses the video.
+          So, here the button clicking action is called 'event' and the button is called 'event-target' and the 'action/behaviour' of playing or pausing is stored in the 'event-listener'.
+        - We can add action/behaviour on the HTML element using addEventListener();
+        - We can remove the action/behaviour from the HTML element using removeEventListener();
+        - Syntax : 
+          <event-target> .addEventListener(<event-type>,<function->action>)
+              |                                 |                |
+        event-target kya hoga             konsa event hoga     kya action perform hoga
+            (button)                    (clicking, hovering)   particular event aane par.
+     
+    
+        
+        - Phases of an Event -
+        - Suppose we have the following heirarchy structure.
+        <div>
+            <article>
+                <h1>       </h1>
+                <p>        </p>
+            </artcile>
+        </div>
+
+        - So, the DOM structure will look like     div
+                                                    |
+                                                 article
+                                                  /    \
+                                                h1      p
+        - So, here if we have a eventListener for clicking event on the <p>, then it flows from top to bottom manner from div -> article -> p
+        - When we have a moving listener from div to p, 
+        - The moment when it is between <div> and <article> i.e. it is moving from div to article (trying to move towards <p>) then that phase is called 'Capturing Phase' and the moment when it reached the <p> element it is called 'At-target phase'. 
+        - And the third phase when we are going back upwards i.e. from <p> -> <article> -> <div>, is called 'BUBBLING PHASE'.
+        
+        - Whenever we are applying the addEventListener(), it is by default applied in the 'BUBBLING PHASE'.
+        - Nothing happens in the 'At-target phase'.
+        - Suppose, if we want the addEventListener() to get hitted in the Capturing Phase, for that we have to pass a value called 'useCapture' as 'true'
+        - This is the Syntax for it : addEventListener(type, listener, useCapture)
+                                                       (click, function, true)
+        - If we send true here, then the addEventListener() will be applied in the Capturing Phase.
+        - It is NOT possible to add 'eventListeners' explicitly in 'target phase'. We can add them only in 'Capturing phase' or 'bubbling phase'.
+    
+    
+    
+    
+        - Event Object -
+        - Whenever an event is Triggered, let say a 'click-type' event is triggered, it firstly goes to the addEventListener('event') as a parameter or  argument.
+        - Jab bhi koi event trigger hoga toh uska event-object eventListener ko mil jata hai.
+        - And we can utilize this event to check what type of data is there.
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    -->
+
+    <div id = "wrapper">
+        <p id = "fpara">First <span> first span </span> Para</p>
+        <p id = "spara">Second <span> second span </span> Para</p>
+        <p id = "tpara">Third <span> third span </span> Para</p>
+        <p id = "fopara">Fourth <span> fourth span </span> Para</p>
+    </div>
+
+    <!-- <div>
+        <p id="fpara">Hello Jii</p>
+        <a id = "fanchor" href="https://www.codehelp.in">Click Here</a>
+    </div> -->
+    <!-- <script src = "index.js"></script> -->
+    <!-- <script src = "index2.js"></script> -->         <!-- Event Object -->
+    <!-- <script src = "index3.js"></script> -->         <!-- Default Action -->
+    <script src = "index4.js"></script>                  <!-- Interview Question -->
+</body> 
+</html>
