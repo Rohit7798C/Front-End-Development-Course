@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <!-- Basics for Event Loop
+    Q1) What is a Synchronous Code ? 
+    Ans : It is a piece of code that executes at the same time, when the flow of execution reaches to it.
+        e.g :
+        flow of execution
+            |->  console.log("Hi");      => Output -> Hi
+            |->  console.log("Love");    => Output -> Love
+            |->  console.log("Babbar");  => Output -> Babbar
+        
+        - Code does execution when 'flow of execution' reaches the code at the same time without needing to wait.
+    
+    
+    Q2) What is a Asynchronous Code ?
+    Ans : It is a piece of code that may or may not give instant execution even if the 'flow of execution' reaches that code.
+        e.g : We have a setTimeout function in which we pass the 'function' and 'duration' as an input parameter.
+            as setTimeout(function , duration).
+            - Which tells us that run this 'function' after this much 'duration' of time.
+            - Suppose we create a function 
+                function sayMyName(){
+                    console.log("Love Babbar!");                
+                }
+            - And use a setTimeout here below as, 
+                setTimeout(sayMyName, 5000);         //5000 is in milliseconds
+
+            - So, it may or may not execute/print after 5sec
+            - It may execute in 10sec, 25sec, 1min, etc.
+            - So, this is called Asynchronous function.
+        - So, including setTimeout(), eventListeners, any network request, any AJAX request, any DB Connection request, all of these lie in the category of  Asynchronous code.
+        - In case of android development, we always try to keep the asynchronous code(all types of requests) separate from the main thread(Most IMP) on which 
+          the entire process is running, so that the main thread will never be 'blocked'.
+
+
+    - Blocking -
+    - Suppose we have the following code 
+            console.log("Start");
+
+            setTimeout(sayMyName, 5000);
+
+            console.log("End");
+        - So, it will instantly print "Start";
+        - And flow of code goes to setTimeout(sayMyName, 5000), and this executes after 5 seconds.
+        - Lastly after waiting for 5sec , it will print "End".
+
+        - But what if we had a "Network Call" instead of setTimeout(sayMyName, 5000).
+        - Now we have to wait indefinitely until we get the 'Response of Network Call', only after which we can print "End".
+        - So, this part of code is called 'Blocked Code'. i.e. the print "End" code gets blocked for indefinite time.
+    
+        
+    - So, for solving this blocking of code in an Asynchronous code, we have 'Event Loop' in JavaScript.
+    
+    - There are 3 components to be taken care of in Event Loops.
+        1) Call Stack : We know that whenever a function is called, it enters into a Stack, and when the function completes, it's entry is removed from the Stack.
+
+        2) Browsers : Used for Handling Asynchronous functions
+
+        3) CallBack / Task Queue : 
+    
+    - Suppose I have the following program :
+        console.log("start");
+
+        setTimeOut(sayMyname, 5000);             ______
+                                         _______|     |_______ This is Browser
+        console.log("End");        ______|                    |_____
+                                  |   setTimeOut(sayMyName,5000)   |
+            |        |         -> |_____(Executes this function____|
+            |        |         |        |____after 5000ms)____|
+            |        |         |               |______|
+            |        |         |Handovered to Browser
+ executes ->|3rd line|         |(Because it is a Asynchronous function)
+            |2nd Line|---------|(And if Call Stack executes this function, it will cause blocking)
+ executes ->|1st line|          (When this function is handled over the browser, it is removed from the Stack).
+            ----------
+        This is Call stack      ________________________________
+                               |     |     |      |      |      |
+                               |     |     |      |      |      |
+                               |     |     |      |      |      |
+                               |_____|_____|______|______|______|
+
+
+
+          
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    -->
+</body>
+</html>
