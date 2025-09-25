@@ -67,7 +67,7 @@
         console.log("start");
 
         setTimeOut(sayMyname, 5000);             ______
-                                         _______|     |_______ This is Browser
+                                         _______|     |_______ This is Browser(Takes the synchronous code in separate thread)
         console.log("End");        ______|                    |_____
                                   |   setTimeOut(sayMyName,5000)   |
             |        |         -> |_____(Executes this function____|
@@ -121,3 +121,4 @@
 </body>
 
 </html>
+
