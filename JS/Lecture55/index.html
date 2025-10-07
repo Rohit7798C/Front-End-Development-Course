@@ -6,7 +6,18 @@
     <title>Event Loop</title>
 </head>
 <body>
-    <!-- Basics for Event Loop
+
+
+    <!-- What is the need of Event Loop ? 
+    Ans: - Since, JavaScript is a Single Threaded Language.
+         - So, how Asynchronous code is handled.
+         - how concurrency is maintained.
+         - how responsive things are maintained.
+         - So, all these things are handled by Event Loop.
+    -->
+         
+    <!--
+    Basics for Event Loop
     Q1) What is a Synchronous Code ? 
     Ans : It is a piece of code that executes at the same time, when the flow of execution reaches to it.
         e.g :
@@ -33,7 +44,7 @@
             - So, it may or may not execute/print after 5sec
             - It may execute in 10sec, 25sec, 1min, etc.
             - So, this is called Asynchronous function.
-        - So, including setTimeout(), eventListeners, any network request, any AJAX request, any DB Connection request, all of these lie in the category of  Asynchronous code.
+        - So, including setTimeout(), eventListeners, any network request, any AJAX request, any DB Connection request, all of these lie in the category of   Asynchronous code.
         - In case of android development, we always try to keep the asynchronous code(all types of requests) separate from the main thread(Most IMP) on which 
           the entire process is running, so that the main thread will never be 'blocked'.
 
@@ -66,61 +77,37 @@
     - Suppose I have the following program :
         console.log("start");
 
-        setTimeOut(sayMyname, 5000);             ______
-                                         _______|     |_______ This is Browser(Takes the synchronous code in separate thread)
-        console.log("End");        ______|                    |_____
-                                  |   setTimeOut(sayMyName,5000)   |
-            |        |         -> |_____(Executes this function____|
-            |        |         |        |____after 5000ms)____|
-            |        |         |               |______|
-            |        |         |Handovered to Browser
- executes ->|3rd line|         |(Because it is a Asynchronous function)
-            |2nd Line|---------|(And if Call Stack executes this function, it will cause blocking)
- executes ->|1st line|          (When this function is handled over the browser, it is removed from the Stack).
-            ----------
-        This is Call stack      ________________________________
-                               |     |     |      |      |      |
-                               |     |     |      |      |      |
-                               |     |     |      |      |      |
-                               |_____|_____|______|______|______|
-                                   This is CallBack / Task Queue
-     <!-- When it comes back to this stack it is then executed and shown -->
+        setTimeOut(sayMyname, 5000);            
+                                                                              
+        console.log("End"); 
+        
+                                                  ______
+                                          _______|     |_______ This is Browser
+                                   ______|                    |_____
+                                  |   setTimeOut(sayMyName,5000)   |______________________________________________
+            |        |         -> |_____(Executes this function____|                                              |
+            |        |         |        |____after 5000ms)____|                                                   |  
+            |        |         |               |______|                                                           | 
+            |        |         |Handovered to Browser                                                             |
+ executes ->|3rd line|         |(Because it is a Asynchronous function)                                           |
+            |2nd Line|---------|(And if Call Stack executes this function, it will cause blocking)                |
+ executes ->|1st line|          (When this function is handled over the browser, it is removed from the Stack).   |
+            ----------              /-----------------------------------------------------------------------------|
+        This is Call stack      ___/_________________________________________                                                   
+                               |            |           |      |      |      |                                                 
+                               |sayMyName() |           |      |      |      |                                     
+                               |            |           |      |      |      |
+                               |____________|___________|______|______|______|
+                                   This is Callback/Task Queue
 
+- So, We can see that the asynchronous function is sent to 'Browser' and after the certain time of the function, it is pushed into the 
+  Callback/task Queue.
+- And it waits in the queue until the 'Call Stack' becomes empty.
+- And once the Call Stack becomes empty, then this function is entered into the Stack by the 'Event Loop', and it is executed to print.
+- And all these Asynchronous functions are send into the Call Stack only by 'Event Loop', and only after the execution of all synchronous entries already in
+  the Stack.
+- And then the console.log("Love Babbar") inside the setTimeout() function gets onto the Call Stack, and prints the "Love Babbar".
 
-          
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    -->
+-->
 </body>
-
 </html>
-
-
